@@ -1,0 +1,61 @@
+package br.com.einstein;
+
+public class Pessoa {
+
+    double peso;
+    double altura;
+    double sexo;
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
+    public double getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(double sexo) {
+        this.sexo = sexo;
+    }
+    
+    public void calculaIMC(double peso, double altura, String sexo){
+        
+        double imc;
+        imc = peso / (altura * altura);
+        
+      if (sexo.equals("M") || sexo.equals("m") || sexo.equals("masculino")){ 
+      if ((imc >= 17.9) && (imc < 18.9))
+              System.out.printf("Você está abaixo do peso recomendado.\n");
+           else if ((imc >= 19) && (imc <= 24.9))
+                   System.out.printf("Você está muito bem! Continue assim!\n");
+                else if ((imc >= 25) && (imc < 27.7))
+                        System.out.printf("Você está acima do peso recomendado. Cuidado!\n");
+                     else 
+                        System.out.printf("Você está Obeso. Procure o acompanhamento de um nutricionista e realizar mais atividades físicas!\n");
+    }
+      
+     if (sexo.equals("F") || sexo.equals("f") || sexo.equals("feminino")){ 
+      if ((imc >= 15) && (imc < 17.9))
+              System.out.printf("Você está abaixo do peso recomendado.\n");
+           else if ((imc >= 18) && (imc < 24.4))
+                   System.out.printf("Você está muito bem! Continue assim!\n");
+                else if ((imc >= 24.5) && (imc < 27.2))
+                        System.out.printf("Você está acima do peso recomendado. Cuidado!\n");
+                     else
+                        System.out.printf("Você está Obeso. Procure o acompanhamento de um nutricionista e realizar mais atividades físicas!\n");         
+      }  
+    }
+    
+}
