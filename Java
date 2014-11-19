@@ -1,0 +1,31 @@
+package br.com.einstein;
+
+import java.util.Scanner;
+
+public class IMC {
+    
+      public static void main(String[] args) {
+      Scanner ler = new Scanner(System.in);
+      Pessoa pessoa = new Pessoa();
+
+      double peso, altura;
+      String sexo;
+
+      System.out.printf("Informe o peso (em kgs):\n");
+      peso = ler.nextDouble();
+
+      System.out.printf("\nInforme a altura (em metros):\n");
+      altura = ler.nextDouble();
+      
+      System.out.println("\nQual o seu sexo?\n");
+      sexo = ler.next();
+      
+      pessoa.calculaIMC(peso, altura, sexo);
+
+      
+     
+
+    }
+      
+}
+ 
